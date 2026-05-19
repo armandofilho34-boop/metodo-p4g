@@ -40,11 +40,6 @@
     </div>
     <div class="hero-spotlight"></div>
 
-    <!-- Foto do expert com opacidade baixa -->
-    <div class="hero-expert-photo">
-      <img src="fotos/expert.png" alt="" aria-hidden="true" />
-    </div>
-
     <div class="container hero-content">
       <div class="hero-text">
         <div class="badge-tag hero-animate" style="animation-delay:.1s">
@@ -56,21 +51,28 @@
         <p class="hero-sub hero-animate" style="animation-delay:.45s">
           ...é uma semana mais perto de ver outra pessoa vestindo a farda no seu lugar. Assista ao vídeo e veja como mais de 100 domingos estudando redação transformaram um cara comum do interior em <strong>Servidor público federal.</strong>
         </p>
+        <div class="hero-video-inline hero-animate" style="animation-delay:.55s">
+          <video controls preload="metadata">
+            <source src="videos/vendas-small.mp4" type="video/mp4" />
+          </video>
+        </div>
         <p class="hero-typewriter hero-animate" style="animation-delay:.6s">
           Seja <span id="typewriter" class="typewriter-word"></span>
         </p>
-        <a href="#planos" class="hero-cta btn-magnetic hero-animate" style="animation-delay:.75s">QUERO MEU ACESSO AGORA ↓</a>
-        <p class="hero-trust hero-animate" style="animation-delay:0.9s">🔒 Compra segura · Satisfação Garantida · Privacidade Protegida</p>
-        <div class="hero-countdown-wrap hero-animate" style="animation-delay:0.95s">
-          <div class="hero-countdown-item"><span class="hcd-num" id="hcdDays">--</span><span class="hcd-label">dias</span></div>
-          <div class="hcd-sep">:</div>
-          <div class="hero-countdown-item"><span class="hcd-num" id="hcdHours">--</span><span class="hcd-label">horas</span></div>
-          <div class="hcd-sep">:</div>
-          <div class="hero-countdown-item"><span class="hcd-num" id="hcdMins">--</span><span class="hcd-label">min</span></div>
-          <span class="hcd-label-right">para a prova — 19 de Julho</span>
+        <div class="hero-countdown-block hero-animate" style="animation-delay:0.7s">
+          <div class="hero-countdown-wrap">
+            <div class="hero-countdown-item"><span class="hcd-num" id="hcdDays">--</span><span class="hcd-label">dias</span></div>
+            <div class="hcd-sep">:</div>
+            <div class="hero-countdown-item"><span class="hcd-num" id="hcdHours">--</span><span class="hcd-label">horas</span></div>
+            <div class="hcd-sep">:</div>
+            <div class="hero-countdown-item"><span class="hcd-num" id="hcdMins">--</span><span class="hcd-label">min</span></div>
+          </div>
+          <p class="hcd-label-right">para a prova — 19 de Julho</p>
         </div>
+        <a href="#planos" class="hero-cta btn-magnetic hero-animate" style="animation-delay:.85s">QUERO MEU ACESSO AGORA ↓</a>
+        <p class="hero-trust hero-animate" style="animation-delay:1.0s">🔒 Compra segura · Satisfação Garantida · Privacidade Protegida</p>
 
-        <div class="hero-bullets hero-animate" style="animation-delay:1.05s">
+        <div class="hero-bullets hero-animate" style="animation-delay:1.1s">
           <span>Metodologia P4G validada</span>
           <span>100% focado na banca CEBRASPE</span>
           <span>Diagnóstico personalizado</span>
@@ -99,17 +101,6 @@
           <span class="stat-num gold" data-target="7">7</span>
           <span class="stat-label">Dias de garantia</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ VÍDEO DE VENDAS — PRIMEIRA DOBRA ══════════════════════ -->
-  <section class="expert-video">
-    <div class="container">
-      <div class="expert-video-wrap reveal">
-        <video controls preload="metadata">
-          <source src="videos/vendas-small.mp4" type="video/mp4" />
-        </video>
       </div>
     </div>
   </section>
@@ -152,8 +143,13 @@
         <span class="gold">É sobre o que está em jogo.</span>
       </h2>
       <div class="pain-intro reveal">
-        <p>É sobre o que acontece com um homem quando ele percebe que está ficando para trás.</p>
-        <p>Enquanto amigos crescem… enquanto os boletos continuam chegando…<br/>você continua tentando estudar — mas sente que nunca sai do lugar.</p>
+        <p class="pain-intro-lead">É sobre o que acontece com um homem quando ele percebe que está ficando para trás.</p>
+        <div class="pain-intro-divider"></div>
+        <p class="pain-intro-body">
+          <span class="pain-intro-line">Enquanto amigos crescem…</span>
+          <span class="pain-intro-line">enquanto os boletos continuam chegando…</span>
+          <span class="pain-intro-line pain-intro-line--close">você continua tentando estudar — mas sente que <em>nunca sai do lugar.</em></span>
+        </p>
       </div>
 
       <div class="pain-quote reveal">
@@ -317,7 +313,7 @@
       <!-- Prova: redação gabaritada -->
       <div class="story-proof reveal">
         <div class="story-proof-img">
-          <img src="fotos/redacao-gabaritada.png" alt="Redação Gabaritada 19,43" />
+          <img src="fotos/redacao-gabaritada.jpeg" alt="Redação Gabaritada 19,43" />
         </div>
         <div class="story-proof-stat">
           <span class="story-proof-num">19,43</span>
