@@ -1286,14 +1286,14 @@ body {
 }
 
 .feat-content h4 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--white);
   line-height: 1.4;
 }
 
 .feat-content p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.75;
 }
@@ -2659,11 +2659,11 @@ body {
 }
 
 .p4g-vs-tag {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 4px 12px;
+  padding: 6px 16px;
   border-radius: 99px;
 }
 
@@ -2680,9 +2680,9 @@ body {
 .p4g-vs-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 500;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .p4g-vs-item span {
@@ -3440,8 +3440,8 @@ body {
 }
 
 .pain-intro p {
-  font-size: 16px;
-  color: var(--muted);
+  font-size: 19px;
+  color: var(--off-white);
   line-height: 1.8;
 }
 
@@ -3464,9 +3464,9 @@ body {
 
 .pain-quote p {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(34px, 5vw, 56px);
   color: var(--white);
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 1px;
 }
 
