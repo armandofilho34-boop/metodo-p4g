@@ -3407,12 +3407,12 @@ body {
 }
 
 .hero-bullets span {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--off-white);
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .hero-bullets span::before {
