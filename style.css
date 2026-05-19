@@ -1114,13 +1114,13 @@ body {
   margin-bottom: 8px;
 }
 
-.price-r { font-size: 20px; font-weight: 700; color: var(--muted); padding-top: 8px; }
+.price-r { font-size: 24px; font-weight: 700; color: var(--muted); padding-top: 12px; }
 .price-r--dark { color: var(--gold); }
 
-.price-val { font-family: 'Bebas Neue', sans-serif; font-size: 68px; color: var(--white); letter-spacing: -1px; }
+.price-val { font-family: 'Bebas Neue', sans-serif; font-size: 86px; color: var(--white); letter-spacing: -1px; }
 .price-val--dark { color: var(--gold-light); }
 
-.price-cents { font-size: 26px; font-weight: 700; color: var(--white); padding-top: 12px; }
+.price-cents { font-size: 32px; font-weight: 700; color: var(--white); padding-top: 16px; }
 .price-cents--dark { color: var(--gold-light); }
 
 .price-installment {
@@ -1141,9 +1141,9 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 28px;
-  font-size: 14px;
+  font-size: 15px;
   border-top: 1px solid var(--border);
   padding-top: 20px;
 }
