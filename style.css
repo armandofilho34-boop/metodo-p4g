@@ -286,11 +286,11 @@ html { scroll-behavior: smooth; }
 
 /* ── PULSE GLOW (botão CTA) ── */
 @keyframes pulseGold {
-  0%, 100% { box-shadow: 0 4px 24px rgba(201,162,39,0.35); }
-  50%       { box-shadow: 0 4px 48px rgba(201,162,39,0.65), 0 0 0 6px rgba(201,162,39,0.1); }
+  0%, 100% { box-shadow: 0 4px 24px rgba(34,197,94,0.4); }
+  50%       { box-shadow: 0 4px 48px rgba(34,197,94,0.7), 0 0 0 6px rgba(34,197,94,0.15); }
 }
 .hero-cta { animation: pulseGold 2.8s ease-in-out infinite; }
-.hero-cta:hover { animation: none; }
+.hero-cta:hover { animation: none; filter: brightness(1.1); transform: translateY(-2px); }
 
 /* Combina entrada + pulso quando o botão é também hero-animate */
 .hero-cta.hero-animate {
@@ -533,17 +533,17 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-  color: #000;
-  font-size: 14px;
+  background: linear-gradient(135deg, #16a34a, #22c55e, #16a34a);
+  color: #fff;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 16px 36px;
+  padding: 20px 44px;
   border-radius: 6px;
   transition: filter 0.2s, transform 0.2s;
-  box-shadow: 0 4px 24px rgba(201,162,39,0.35);
+  box-shadow: 0 4px 24px rgba(34,197,94,0.45);
 }
 
 .hero-cta:hover { filter: brightness(1.1); transform: translateY(-2px); }
@@ -571,13 +571,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 48px;
-  gap: 4px;
+  padding: 32px 52px;
+  gap: 6px;
 }
 
 .stat-num {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 38px;
+  font-size: 46px;
   color: var(--gold);
   line-height: 1;
   letter-spacing: 1px;
@@ -586,7 +586,7 @@ body {
 .stat-plus { font-size: 24px; }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   text-align: center;
   letter-spacing: 0.5px;
@@ -1681,8 +1681,8 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
-  padding: 10px 28px;
-  font-size: 14px;
+  padding: 14px 32px;
+  font-size: 15px;
   color: #fff;
   position: relative;
   z-index: 100;
@@ -1733,13 +1733,13 @@ body {
 }
 
 .urgency-logos img {
-  height: 44px;
-  width: 44px;
+  height: 56px;
+  width: 56px;
   object-fit: contain;
   border-radius: 6px;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
-  background: rgba(255,255,255,0.08);
-  padding: 3px;
+  background: rgba(255,255,255,0.1);
+  padding: 4px;
 }
 
 .urgency-center {
@@ -1750,7 +1750,7 @@ body {
   justify-content: center;
 }
 
-.urgency-bar p { margin: 0; text-align: center; font-size: 13px; }
+.urgency-bar p { margin: 0; text-align: center; font-size: 15px; font-weight: 600; }
 .urgency-bar strong { color: #ffd700; }
 
 .urgency-countdown {
