@@ -531,6 +531,18 @@ body {
   display: block;
 }
 
+.hero-title-cont {
+  display: block;
+  font-size: clamp(48px, 7vw, 86px);
+  color: var(--white);
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.0;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
 .hero-sub {
   font-size: 19px;
   color: var(--off-white);
@@ -1735,8 +1747,8 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 24px;
-  padding: 14px 36px;
-  font-size: 15px;
+  padding: 20px 36px;
+  font-size: 17px;
   color: #fff;
   position: relative;
   z-index: 100;
@@ -1792,8 +1804,8 @@ body {
 }
 
 .urgency-logos img {
-  height: 68px;
-  width: 68px;
+  height: 76px;
+  width: 76px;
   object-fit: contain;
   border-radius: 10px;
   background: #ffffff;
@@ -1809,7 +1821,7 @@ body {
   justify-content: center;
 }
 
-.urgency-bar p { margin: 0; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.3px; }
+.urgency-bar p { margin: 0; text-align: center; font-size: 19px; font-weight: 700; letter-spacing: 0.3px; }
 .urgency-bar strong { color: #ffd700; }
 
 .urgency-countdown {
@@ -1827,7 +1839,7 @@ body {
 .urgency-btn {
   background: #fff;
   color: #c0392b;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.5px;
   text-decoration: none;
@@ -2675,7 +2687,7 @@ body {
 .p4g-col--good ul li::before { color: var(--gold); }
 
 .p4g-intro {
-  font-size: 16px;
+  font-size: 20px;
   color: var(--muted);
   text-align: center;
   max-width: 600px;
@@ -2853,8 +2865,9 @@ body {
 .p4g-callout {
   max-width: 860px;
   margin: 0 auto 48px;
-  background: var(--navy);
-  border: 1px solid rgba(201,162,39,0.2);
+  background: rgba(201,162,39,0.06);
+  border: 1.5px solid rgba(201,162,39,0.45);
+  box-shadow: 0 0 40px rgba(201,162,39,0.12);
   border-radius: 20px;
   padding: 0;
   overflow: hidden;
@@ -2865,8 +2878,8 @@ body {
 .p4g-callout::before { display: none; }
 
 .p4g-callout-left {
-  background: linear-gradient(145deg, rgba(201,162,39,0.12), rgba(201,162,39,0.04));
-  border-right: 1px solid rgba(201,162,39,0.15);
+  background: linear-gradient(145deg, rgba(201,162,39,0.22), rgba(201,162,39,0.08));
+  border-right: 1.5px solid rgba(201,162,39,0.4);
   padding: 40px 48px;
   display: flex;
   flex-direction: column;
@@ -2901,7 +2914,7 @@ body {
 }
 
 .p4g-callout-desc {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--white);
   line-height: 1.6;
   font-weight: 600;
@@ -2944,11 +2957,11 @@ body {
   align-items: center;
   gap: 20px;
   padding: 28px 28px;
-  background: rgba(201,162,39,0.04);
-  border: 1.5px solid rgba(201,162,39,0.2);
+  background: rgba(201,162,39,0.06);
+  border: 1.5px solid rgba(201,162,39,0.35);
   border-radius: 14px;
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 0px rgba(201,162,39,0);
+  box-shadow: 0 2px 16px rgba(201,162,39,0.08);
 }
 
 .p4g-learn-card:nth-child(even) { border-right: 1.5px solid rgba(201,162,39,0.2); }
@@ -2965,7 +2978,7 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 40px;
   color: var(--gold);
-  opacity: 0.3;
+  opacity: 0.7;
   letter-spacing: 1px;
   flex-shrink: 0;
   transition: opacity 0.2s;
@@ -3027,11 +3040,18 @@ body {
 }
 
 .p4g-close {
-  font-size: 15px;
-  color: var(--muted);
+  font-size: 20px;
+  color: var(--off-white);
   text-align: center;
-  font-style: italic;
-  line-height: 1.75;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  border-left: 3px solid var(--gold);
+  background: rgba(201,162,39,0.04);
+  border-radius: 0 10px 10px 0;
 }
 
 /* ════════════════════════════════
@@ -3569,9 +3589,9 @@ body {
   margin: 0 auto 56px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
-  text-align: center;
+  text-align: left;
 }
 
 .pain-intro-lead {
@@ -3651,15 +3671,16 @@ body {
 .pain-grid-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(239,68,68,0.04);
-  border: 1px solid rgba(239,68,68,0.1);
-  border-radius: 10px;
-  padding: 20px 22px;
-  font-size: 20px;
-  color: var(--off-white);
-  font-weight: 500;
+  gap: 14px;
+  background: rgba(239,68,68,0.07);
+  border: 1.5px solid rgba(239,68,68,0.35);
+  border-radius: 12px;
+  padding: 22px 24px;
+  font-size: 22px;
+  color: var(--white);
+  font-weight: 600;
   transition: background 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 16px rgba(239,68,68,0.08);
 }
 
 .pain-grid-item:hover {
@@ -3852,16 +3873,16 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-  color: #000;
-  font-size: 16px;
+  background: linear-gradient(135deg, #16a34a, #22c55e, #16a34a);
+  color: #fff;
+  font-size: 24px;
   font-weight: 900;
   letter-spacing: 2px;
   text-decoration: none;
-  padding: 20px 48px;
+  padding: 28px 68px;
   border-radius: 8px;
   transition: filter 0.2s, transform 0.2s;
-  box-shadow: 0 6px 32px rgba(201,162,39,0.45);
+  box-shadow: 0 6px 32px rgba(34,197,94,0.45);
   animation: pulseGold 2.8s ease-in-out infinite;
 }
 
