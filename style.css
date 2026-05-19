@@ -1690,21 +1690,24 @@ body {
 
 @media (max-width: 768px) {
   .urgency-bar {
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-    padding: 10px 14px;
-  }
-  .urgency-logos { display: none; }
-  .urgency-center {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4px 8px;
+    display: flex !important;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 16px;
+    text-align: center;
   }
-  .urgency-bar p { font-size: 11px; text-align: left; }
-  .urgency-countdown { font-size: 11px; }
-  .urgency-btn { font-size: 11px; padding: 8px 14px; }
+  .urgency-logos { display: none !important; }
+  .urgency-center {
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .urgency-bar p { font-size: 12px; text-align: center; }
+  .urgency-countdown { font-size: 12px; }
+  .urgency-btn { font-size: 12px; padding: 8px 20px; }
 }
 
 @keyframes urgencyMove {
