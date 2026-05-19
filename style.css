@@ -483,8 +483,8 @@ body {
   height: 100%;
   object-fit: contain;
   object-position: bottom center;
-  opacity: 0.5;
-  filter: contrast(1.05) brightness(1.25) drop-shadow(0 0 40px rgba(201,162,39,0.2));
+  opacity: 0.82;
+  filter: contrast(1.08) brightness(1.1) saturate(1.05) drop-shadow(0 0 50px rgba(201,162,39,0.25));
 }
 
 .badge-tag {
