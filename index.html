@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método P4G — PMAL 2026</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BARRA DE PROGRESSO -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- BANNER URGÊNCIA -->
+  <div class="urgency-bar">
+    <div class="urgency-logos">
+      <img src="fotos/logo-ppf.jpeg" alt="Polícia Penal Federal" />
+      <img src="fotos/logo-pmal.png" alt="PM Alagoas" />
+      <img src="fotos/logo-cebraspe.png" alt="Cebraspe" />
+    </div>
+    <div class="urgency-center">
+      <span class="urgency-dot"></span>
+      <p><strong>PM-Alagoas 2026 · Banca Cebraspe</strong> — ATENÇÃO: Prova em <strong>19 de Julho</strong></p>
+      <span class="urgency-countdown" id="countdown">carregando...</span>
+    </div>
+    <a href="#planos" class="urgency-btn">Garantir vaga</a>
+  </div>
+
+  <div class="noise"></div>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section class="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-bg">
+      <div class="hero-rays"></div>
+    </div>
+    <div class="hero-spotlight"></div>
+
+    <!-- Foto do expert com opacidade baixa -->
+    <div class="hero-expert-photo">
+      <img src="fotos/expert.png" alt="" aria-hidden="true" />
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="badge-tag hero-animate" style="animation-delay:.1s">
+          <span class="badge-star">★</span> CONCURSO PM 2026 <span class="badge-star">★</span>
+        </div>
+        <h1 class="hero-title hero-animate" style="animation-delay:.3s">
+          CADA SEMANA SEM <span class="hero-title-gold">TREINAR REDAÇÃO</span>
+        </h1>
+        <p class="hero-sub hero-animate" style="animation-delay:.45s">
+          ...é uma semana mais perto de ver outra pessoa vestindo a farda no seu lugar. Assista ao vídeo e veja como mais de 100 domingos estudando redação transformaram um cara comum do interior em <strong>Servidor público federal.</strong>
+        </p>
+        <p class="hero-typewriter hero-animate" style="animation-delay:.6s">
+          Seja <span id="typewriter" class="typewriter-word"></span>
+        </p>
+        <a href="#planos" class="hero-cta btn-magnetic hero-animate" style="animation-delay:.75s">QUERO MEU ACESSO AGORA ↓</a>
+        <p class="hero-trust hero-animate" style="animation-delay:0.9s">🔒 Compra segura · Satisfação Garantida · Privacidade Protegida</p>
+        <div class="hero-countdown-wrap hero-animate" style="animation-delay:0.95s">
+          <div class="hero-countdown-item"><span class="hcd-num" id="hcdDays">--</span><span class="hcd-label">dias</span></div>
+          <div class="hcd-sep">:</div>
+          <div class="hero-countdown-item"><span class="hcd-num" id="hcdHours">--</span><span class="hcd-label">horas</span></div>
+          <div class="hcd-sep">:</div>
+          <div class="hero-countdown-item"><span class="hcd-num" id="hcdMins">--</span><span class="hcd-label">min</span></div>
+          <span class="hcd-label-right">para a prova — 19 de Julho</span>
+        </div>
+
+        <div class="hero-bullets hero-animate" style="animation-delay:1.05s">
+          <span>Metodologia P4G validada</span>
+          <span>100% focado na banca CEBRASPE</span>
+          <span>Diagnóstico personalizado</span>
+          <span>Suporte com o Mentor</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="container hero-stats-inner">
+        <div class="stat">
+          <span class="stat-num gold" data-target="15" data-prefix="+">+15</span>
+          <span class="stat-label">Aprovados</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num gold">19,50</span>
+          <span class="stat-label">Nota CEBRASPE</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num gold">19/07</span>
+          <span class="stat-label">Data da prova</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num gold" data-target="7">7</span>
+          <span class="stat-label">Dias de garantia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EXPERT / QUEM SOU EU ══════════════════════ -->
+  <section class="expert">
+    <div class="expert-bg"></div>
+    <div class="container expert-grid">
+
+      <div class="expert-photo-col reveal">
+        <div class="expert-photo-wrap">
+          <img src="fotos/expert2.jpg" alt="Wagner Vicente, Servidor Público Federal" />
+          <div class="expert-badge-card">
+            <span class="expert-badge-icon">★</span>
+            <div>
+              <strong>+15 aprovados</strong>
+              <span>no método</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="expert-text-col reveal">
+        <div class="section-label">QUEM VAI TE GUIAR</div>
+        <h2 class="expert-title">
+          Wagner Vicente.<br/>
+          <span class="gold">Servidor público federal.</span>
+        </h2>
+        <p class="expert-bio">
+          Sai de uma cidade de 5 mil habitantes. Ouvi que nunca conseguiria passar. Trabalhei em dois empregos. Peguei ônibus lotado às 5 da manhã. E depois de mais de 100 domingos estudando redação… conquistei <strong>19,50 na banca CEBRASPE</strong>.
+        </p>
+        <p class="expert-bio">
+          Eu não tinha dinheiro para pagar correção. Saía de escola pública, pedindo aos professores para corrigir minha redação. <strong>Hoje sou Servidor público federal.</strong> E agora estou ensinando o mesmo método para quem se recusa a continuar vivendo abaixo do próprio potencial.
+        </p>
+        <div class="expert-stats">
+          <div class="expert-stat">
+            <span class="expert-stat-num">19,50</span>
+            <span class="expert-stat-label">Nota CEBRASPE</span>
+          </div>
+          <div class="expert-stat">
+            <span class="expert-stat-num">100<span>+</span></span>
+            <span class="expert-stat-label">domingos de estudo</span>
+          </div>
+          <div class="expert-stat">
+            <span class="expert-stat-num">15<span>+</span></span>
+            <span class="expert-stat-label">alunos aprovados</span>
+          </div>
+        </div>
+        <a href="#planos" class="hero-cta hero-cta--sm btn-magnetic">CONHECER O MÉTODO P4G ↓</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ VÍDEO DO EXPERT ══════════════════════ -->
+  <section class="expert-video">
+    <div class="container">
+      <div class="section-label reveal">ASSISTA ANTES DE DECIDIR</div>
+      <h2 class="section-title reveal">
+        Entenda como funciona<br/>
+        <span class="gold">o método na prática.</span>
+      </h2>
+      <p class="section-sub reveal">Em minutos você vai entender exatamente o que vai receber e por que esse método funciona.</p>
+      <div class="expert-video-wrap reveal">
+        <video controls preload="metadata">
+          <source src="videos/vendas-small.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SEÇÃO DE DOR ══════════════════════ -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="section-label reveal">O PROBLEMA REAL</div>
+      <h2 class="section-title reveal">
+        Não é só sobre redação.<br/>
+        <span class="gold">É sobre o que está em jogo.</span>
+      </h2>
+      <div class="pain-intro reveal">
+        <p>É sobre o que acontece com um homem quando ele percebe que está ficando para trás.</p>
+        <p>Enquanto amigos crescem… enquanto os boletos continuam chegando…<br/>você continua tentando estudar — mas sente que nunca sai do lugar.</p>
+      </div>
+
+      <div class="pain-quote reveal">
+        <span class="pain-quote-mark">"</span>
+        <p>Você sabe que é capaz.<br/>Mas continua travando justamente<br/>na etapa que pode decidir sua vida.</p>
+      </div>
+
+      <div class="pain-grid reveal">
+        <div class="pain-grid-item">
+          <span class="pain-x">✕</span>
+          <span>Dá branco quando começa a escrever</span>
+        </div>
+        <div class="pain-grid-item">
+          <span class="pain-x">✕</span>
+          <span>Vê dezenas de aulas e continua perdido</span>
+        </div>
+        <div class="pain-grid-item">
+          <span class="pain-x">✕</span>
+          <span>Decora estrutura sem entender a lógica</span>
+        </div>
+        <div class="pain-grid-item">
+          <span class="pain-x">✕</span>
+          <span>Escreve e nunca sabe se está evoluindo</span>
+        </div>
+        <div class="pain-grid-item pain-grid-item--wide">
+          <span class="pain-x">✕</span>
+          <span>Sente que estuda muito… mas continua inseguro</span>
+        </div>
+      </div>
+
+      <div class="pain-closer reveal">
+        <p>Enquanto isso… outros candidatos já estão aprendendo o padrão exato que a CEBRASPE usa para aprovar.</p>
+        <p class="pain-closer-strong">E abrindo vantagem no ranking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PREVIEW DO MATERIAL ══════════════════════ -->
+  <section class="materials">
+    <div class="container">
+      <div class="section-label reveal">O MÉTODO P4G</div>
+      <h2 class="section-title reveal">
+        A CEBRASPE não procura<br/>
+        <span class="gold">criatividade. Ela procura padrão.</span>
+      </h2>
+      <div class="p4g-body reveal">
+        <p class="p4g-intro">Ela procura padrão. Foi isso que eu descobri depois de mais de 100 domingos estudando apenas redação.</p>
+
+        <div class="p4g-vs-block">
+          <div class="p4g-vs-col p4g-vs-col--bad">
+            <div class="p4g-vs-header">
+              <span class="p4g-vs-tag p4g-vs-tag--bad">O corretor NÃO quer</span>
+            </div>
+            <div class="p4g-vs-items">
+              <div class="p4g-vs-item p4g-vs-item--bad"><span>✕</span> Palavras difíceis</div>
+              <div class="p4g-vs-item p4g-vs-item--bad"><span>✕</span> Texto bonito</div>
+              <div class="p4g-vs-item p4g-vs-item--bad"><span>✕</span> Floreio</div>
+              <div class="p4g-vs-item p4g-vs-item--bad"><span>✕</span> Criatividade</div>
+            </div>
+          </div>
+
+          <div class="p4g-vs-divider">
+            <div class="p4g-vs-line"></div>
+            <span>VS</span>
+            <div class="p4g-vs-line"></div>
+          </div>
+
+          <div class="p4g-vs-col p4g-vs-col--good">
+            <div class="p4g-vs-header">
+              <span class="p4g-vs-tag p4g-vs-tag--good">Ele quer</span>
+            </div>
+            <div class="p4g-vs-items">
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Estrutura</div>
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Organização</div>
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Objetividade</div>
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Lógica</div>
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Função argumentativa</div>
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Construção limpa</div>
+              <div class="p4g-vs-item p4g-vs-item--good"><span>✓</span> Padrão</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="p4g-bridge">E foi exatamente por isso que desenvolvi um método focado no que realmente pontua dentro da banca.</p>
+      </div>
+
+      <!-- Callout P4G -->
+      <div class="p4g-callout reveal">
+        <div class="p4g-callout-left">
+          <span class="p4g-callout-tag">O MÉTODO</span>
+          <h3 class="p4g-callout-title">P4G</h3>
+        </div>
+        <div class="p4g-callout-right">
+          <p class="p4g-callout-desc">A estrutura invisível que a CEBRASPE espera encontrar em toda redação nota máxima.</p>
+          <div class="p4g-rhythm">
+            <span>Parágrafo por parágrafo</span>
+            <span class="p4g-dot">·</span>
+            <span>Linha por linha</span>
+            <span class="p4g-dot">·</span>
+            <span>Função por função</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn grid -->
+      <div class="p4g-learn-grid stagger">
+        <div class="p4g-learn-card">
+          <span class="plc-num">01</span>
+          <p>Como começar sem travar</p>
+        </div>
+        <div class="p4g-learn-card">
+          <span class="plc-num">02</span>
+          <p>Como desenvolver argumento sem se perder</p>
+        </div>
+        <div class="p4g-learn-card">
+          <span class="plc-num">03</span>
+          <p>Como construir repertório útil</p>
+        </div>
+        <div class="p4g-learn-card">
+          <span class="plc-num">04</span>
+          <p>Como fechar redação sem ficar perdido</p>
+        </div>
+        <div class="p4g-learn-card">
+          <span class="plc-num">05</span>
+          <p>Como escrever dentro do padrão da banca</p>
+        </div>
+        <div class="p4g-learn-card">
+          <span class="plc-num">06</span>
+          <p>O que está por trás das redações nota máxima</p>
+        </div>
+      </div>
+
+      <p class="p4g-close reveal">Enquanto muitos cursinhos fazem você consumir teoria infinita… o P4G ensina exatamente o que a banca quer encontrar.</p>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ HISTÓRIA + AUTORIDADE ══════════════════════ -->
+  <section class="story-section">
+    <div class="container">
+      <div class="section-label reveal">A HISTÓRIA</div>
+      <h2 class="section-title reveal">
+        Mais de 100 domingos<br/>
+        <span class="gold">escrevendo redação.</span>
+      </h2>
+
+      <!-- Narrativa -->
+      <div class="story-narrative">
+        <p class="sn-line reveal" data-delay="0">Enquanto muita gente descansava… eu estudava o padrão invisível da CEBRASPE.</p>
+        <p class="sn-line reveal" data-delay="150">Saí de uma cidade de 5 mil habitantes.<br/>Ouvi que nunca conseguiria passar.</p>
+        <p class="sn-line reveal" data-delay="300">Trabalhei em dois empregos.<br/>Peguei ônibus lotado às 5 da manhã.</p>
+        <p class="sn-line reveal" data-delay="450">Não tinha dinheiro para correção. Saía de escola pública pedindo aos professores para corrigir minha redação.</p>
+        <div class="sn-climax reveal" data-delay="600">
+          <span class="sn-climax-line"></span>
+          <p>E depois de mais de 100 domingos…<br/>
+          conquistei <strong>19,50</strong> na banca <strong>CEBRASPE.</strong></p>
+          <span class="sn-climax-line"></span>
+        </div>
+      </div>
+
+      <!-- Prova: redação gabaritada -->
+      <div class="story-proof reveal">
+        <div class="story-proof-img">
+          <img src="fotos/redacao-gabaritada.png" alt="Redação Gabaritada 19,50" />
+        </div>
+        <div class="story-proof-stat">
+          <span class="story-proof-num">19,50</span>
+          <span class="story-proof-label">Nota CEBRASPE</span>
+          <p>Redação gabaritada. Conquistada do zero, sem cursinho caro, sem professor particular.</p>
+        </div>
+      </div>
+
+      <!-- Hoje -->
+      <div class="story-today reveal">
+        <div class="story-today-photo reveal">
+          <img src="fotos/expert3.png" alt="Servidor público federal" />
+        </div>
+        <div class="story-today-text reveal">
+          <h3 class="story-today-title">Hoje sou<br/><span class="gold">Servidor público federal.</span></h3>
+          <p>Agora estou ensinando o mesmo método para quem se recusa a continuar vivendo abaixo do próprio potencial.</p>
+          <a href="#planos" class="hero-cta hero-cta--sm btn-magnetic">QUERO APRENDER O MÉTODO ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SEM VS COM ══════════════════════ -->
+  <section class="versus">
+    <div class="container">
+      <div class="section-label reveal">CONTRASTE</div>
+      <h2 class="section-title reveal">
+        O que te atrasa<br/>
+        <span class="gold">vs o que a Mentoria entrega.</span>
+      </h2>
+      <div class="versus-grid">
+        <div class="versus-card versus-card--bad reveal">
+          <div class="versus-header versus-header--bad">
+            <span class="versus-icon">✗</span>
+            <h3>Sem mentoria</h3>
+          </div>
+          <ul class="versus-list">
+            <li>❌ Consumir teoria demais e praticar pouco</li>
+            <li>❌ Assistir aulas aleatórias sem continuidade</li>
+            <li>❌ Não entender o que a banca realmente corrige</li>
+            <li>❌ Escrever sozinho sem saber onde erra</li>
+            <li>❌ Ficar travado durante a semana</li>
+            <li>❌ Decorar esqueletos sem compreender estrutura</li>
+            <li>❌ Medo de pagar uma fortuna no recurso pós-prova</li>
+          </ul>
+        </div>
+        <div class="versus-divider">
+          <div class="versus-vs">VS</div>
+        </div>
+        <div class="versus-card versus-card--good reveal">
+          <div class="versus-header versus-header--good">
+            <span class="versus-icon">✓</span>
+            <h3>Com a Mentoria</h3>
+          </div>
+          <ul class="versus-list">
+            <li>→ Método direto e focado em execução</li>
+            <li>→ Trilha organizada específica para CEBRASPE</li>
+            <li>→ Diagnóstico estratégico linha por linha</li>
+            <li>→ Correções detalhadas até a prova</li>
+            <li>→ Suporte direto com acompanhamento real</li>
+            <li>→ Biblioteca de estruturas validadas</li>
+            <li>→ Auxílio estratégico no recurso pós-prova</li>
+          </ul>
+        </div>
+      </div>
+      <div class="versus-cta reveal">
+        <a href="#planos" class="hero-cta btn-magnetic">QUERO A MENTORIA FÊNIX ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ VÍDEOS PROVA SOCIAL ══════════════════════ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-label reveal">DEPOIMENTOS</div>
+      <h2 class="section-title reveal">
+        Alunos que<br/>
+        <span class="gold">seguiram o método.</span>
+      </h2>
+      <p class="section-sub reveal">Veja o que quem já passou pelo método tem a dizer.</p>
+      <div class="videos-grid stagger">
+        <div class="video-card">
+          <div class="video-wrap">
+            <video controls preload="metadata">
+              <source src="videos/gabriel_small.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-info">
+            <p class="video-name">Gabriel</p>
+            <p class="video-desc">Aluno aprovado com o Método P4G ✅</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-wrap">
+            <video controls preload="metadata">
+              <source src="videos/diego_small.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-info">
+            <p class="video-name">Diego</p>
+            <p class="video-desc">Aluno aprovado com o Método P4G ✅</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-wrap">
+            <video controls preload="metadata">
+              <source src="videos/bia_small.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-info">
+            <p class="video-name">Bia</p>
+            <p class="video-desc">Aluno aprovado com o Método P4G ✅</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ DUALIDADE ══════════════════════ -->
+  <section class="duality-section">
+    <div class="container">
+      <div class="section-label reveal">A ESCOLHA</div>
+      <h2 class="section-title reveal">
+        Agora você tem<br/>
+        <span class="gold">dois caminhos.</span>
+      </h2>
+      <div class="duality-grid">
+        <div class="duality-card duality-card--bad reveal">
+          <h3 class="duality-title duality-title--bad">Caminho 1</h3>
+          <p class="duality-sub">Continuar:</p>
+          <ul class="duality-list">
+            <li>Assistindo vídeos aleatórios;</li>
+            <li>Travando na redação;</li>
+            <li>Estudando inseguro;</li>
+            <li>Perdendo pontos que poderiam ser seus;</li>
+            <li>Tentando se convencer de que "uma hora vai sair" ou pior "a redação sai na hora".</li>
+          </ul>
+          <p class="duality-close">Até perceber tarde demais que a redação destruiu sua aprovação.</p>
+        </div>
+        <div class="duality-card duality-card--good reveal">
+          <h3 class="duality-title duality-title--good">Caminho 2</h3>
+          <p class="duality-sub">Aprender o padrão invisível da CEBRASPE.</p>
+          <p class="duality-sub">Entrar na prova sabendo exatamente o que fazer.</p>
+          <p class="duality-sub">E finalmente se aproximar:</p>
+          <ul class="duality-list duality-list--good">
+            <li>da farda;</li>
+            <li>do salário;</li>
+            <li>da estabilidade;</li>
+            <li>do respeito;</li>
+            <li>da sensação de vitória;</li>
+            <li>da vida que hoje parece distante.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PLANOS ══════════════════════ -->
+  <section class="plans" id="planos">
+    <div class="container">
+      <div class="section-label reveal">OFERTA</div>
+      <h2 class="section-title reveal">
+        Tudo que você precisa<br/>
+        <span class="gold">para a nota máxima.</span>
+      </h2>
+      <p class="section-sub reveal">O Curso te dá o método. A Mentoria te leva pela mão até a prova.</p>
+
+      <div class="plans-grid stagger">
+
+        <!-- ─── CURSO CHARLIE MYKE ─── -->
+        <div class="plan-card">
+          <div class="plan-cover">
+            <img src="fotos/capa-charlie-myke.jpeg" alt="Curso Charlie Myke" />
+          </div>
+          <div class="plan-top plan-top--blue">
+            <div class="plan-icon-wrap plan-icon-wrap--blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <p class="plan-category">PLANO 01</p>
+              <h3 class="plan-name">Curso Charlie Myke</h3>
+            </div>
+          </div>
+          <div class="plan-divider"></div>
+          <div class="plan-body">
+            <p class="plan-tagline">Para quem quer parar de estudar perdido e dominar o padrão da CEBRASPE.</p>
+            <div class="plan-price-block">
+              <span class="price-from">12x de</span>
+              <div class="price-row">
+                <span class="price-r">R$</span>
+                <span class="price-val">15</span>
+                <span class="price-cents">,20</span>
+              </div>
+              <span class="price-installment">ou à vista R$ 182,40</span>
+            </div>
+            <ul class="features-list">
+              <li class="f-yes"><span class="f-icon">✓</span> Metodologia P4G — mesmo método da nota máxima</li>
+              <li class="f-yes"><span class="f-icon">✓</span> Estrutura validada dentro do padrão CEBRASPE</li>
+              <li class="f-yes"><span class="f-icon">✓</span> O padrão exato que a banca usa para pontuar</li>
+              <li class="f-yes"><span class="f-icon">✓</span> Da introdução à conclusão (100% focado na banca)</li>
+              <li class="f-yes"><span class="f-icon">✓</span> Arsenal de conectivos para nunca mais travar</li>
+              <li class="f-yes"><span class="f-icon">✓</span> Estruturas validadas para construção de redação</li>
+            </ul>
+            <a href="https://pay.plataformatutory.com.br/checkout/4a57e7de-a7cb-4f06-b6c6-a9ff2c942b93" target="_blank" class="plan-btn plan-btn--blue btn-magnetic">QUERO MEU ACESSO</a>
+            <p class="secure-note">🔒 Pagamento seguro · Acesso imediato</p>
+          </div>
+        </div>
+
+        <!-- ─── MENTORIA FÊNIX ─── -->
+        <div class="plan-card plan-card--gold">
+          <div class="plan-cover">
+            <img src="fotos/capa-mentoria-fenix.jpeg" alt="Mentoria Fênix" />
+          </div>
+          <div class="featured-ribbon">RECOMENDADO</div>
+          <div class="plan-top plan-top--gold">
+            <div class="plan-icon-wrap plan-icon-wrap--gold">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <p class="plan-category plan-category--gold">PLANO 02</p>
+              <h3 class="plan-name plan-name--dark">Mentoria Fênix</h3>
+            </div>
+          </div>
+          <div class="plan-divider plan-divider--gold"></div>
+          <div class="plan-body">
+            <p class="plan-tagline plan-tagline--dark">Para quem quer acompanhamento estratégico até a prova e entrar preparado para competir pelas primeiras posições.</p>
+            <div class="plan-price-block">
+              <span class="price-from price-from--dark">12x de</span>
+              <div class="price-row">
+                <span class="price-r price-r--dark">R$</span>
+                <span class="price-val price-val--dark">41</span>
+                <span class="price-cents price-cents--dark">,06</span>
+              </div>
+              <span class="price-installment price-installment--dark">ou à vista R$ 492,72</span>
+            </div>
+            <ul class="features-list features-list--dark">
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> Curso Charlie Myke completo</li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> Metodologia P4G aplicada passo a passo</li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> <strong>Diagnóstico estratégico individual da sua redação</strong></li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> <strong>Correções da sua redação detalhadas até a prova</strong></li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> <strong>Direcionamento estratégico personalizado</strong></li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> <strong>Encontros ao vivo com o mentor</strong></li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> Suporte direto para não ficar travado durante a preparação</li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> Estruturas validadas no padrão CEBRASPE</li>
+              <li class="f-yes f-yes--dark"><span class="f-icon">✓</span> Auxílio estratégico no recurso pós-prova</li>
+            </ul>
+            <a href="https://pay.plataformatutory.com.br/checkout/4da2a522-8ac2-4728-bbb4-1fd2057e6e1d" target="_blank" class="plan-btn plan-btn--dark btn-magnetic">QUERO O MAIS AVANÇADO</a>
+            <p class="secure-note secure-note--dark">🔒 Pagamento seguro · Garantia de 7 dias</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ GARANTIA ══════════════════════ -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="guarantee-card reveal">
+
+        <div class="guarantee-left">
+          <div class="guarantee-badge">
+            <span class="guarantee-badge-days" data-target="7">7</span>
+            <span class="guarantee-badge-label">DIAS DE<br/>GARANTIA</span>
+            <div class="guarantee-badge-sub">incondicional</div>
+          </div>
+        </div>
+
+        <div class="guarantee-right">
+          <h2 class="guarantee-title">O risco é<br/><span class="guarantee-title-green">todo nosso.</span></h2>
+          <div class="guarantee-body">
+            <p>Entre na mentoria. Assista. Aplique.</p>
+            <p>Se sentir que não era o que esperava… basta mandar uma mensagem.</p>
+            <div class="guarantee-highlight-block">
+              <span class="guarantee-pct" data-target="100" data-suffix="%">100%</span>
+              <span class="guarantee-pct-label">do valor devolvido</span>
+            </div>
+            <div class="guarantee-pillars">
+              <div class="guarantee-pillar">
+                <span>✓</span> Sem burocracia
+              </div>
+              <div class="guarantee-pillar">
+                <span>✓</span> Sem enrolação
+              </div>
+              <div class="guarantee-pillar">
+                <span>✓</span> Sem risco
+              </div>
+            </div>
+            <p class="guarantee-close">Porque quem precisa provar resultado somos nós.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FAQ ══════════════════════ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label reveal">TIRE SUAS DÚVIDAS</div>
+      <h2 class="section-title reveal">
+        Perguntas<br/>
+        <span class="gold">frequentes.</span>
+      </h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>"E se eu não souber escrever?"</span>
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            <p>Melhor ainda. Porque o problema da maioria não é falta de inteligência. É falta de estrutura. O Método P4G foi criado justamente para pessoas que travam, se perdem e nunca entenderam como a banca realmente corrige.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>"Ainda dá tempo até julho?"</span>
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            <p>Sim. Porque você não precisa passar meses consumindo teoria. Você precisa aprender o padrão certo e praticar da forma correta.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>"Serve só para PM-AL?"</span>
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            <p>O foco é PMAL 2026. Mas o método funciona para qualquer carreira policial com banca CEBRASPE. Você aprende uma vez e usa para o resto da vida.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>"Quem corrige a minha redação?"</span>
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            <p>Sua redação será corrigida por dois profissionais especializados em identificar exatamente o que está impedindo sua evolução dentro do padrão CEBRASPE.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>"Por quanto tempo terei acesso ao método?"</span>
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            <p>Vamos acompanhar você até o dia <strong>18/07/2026</strong>. Ou seja, suporte até um dia antes da sua prova.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ JORNADA DO ALUNO ══════════════════════ -->
+  <section class="journey">
+    <div class="container">
+      <div class="section-label reveal">SUA JORNADA</div>
+      <h2 class="section-title reveal">
+        Do zero ao padrão<br/>
+        <span class="gold">CEBRASPE. Passo a passo.</span>
+      </h2>
+      <p class="section-sub reveal">Após a compra, você não fica perdido. Veja exatamente o que acontece.</p>
+      <div class="journey-steps">
+        <div class="journey-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h4>Acesso imediato</h4>
+            <p>Após a compra, você recebe o acesso ao método na hora. Sem espera.</p>
+          </div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h4>Diagnóstico da sua redação</h4>
+            <p>Entendemos exatamente onde você está errando dentro do padrão CEBRASPE.</p>
+          </div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h4>Método P4G na prática</h4>
+            <p>Parágrafo por parágrafo. Linha por linha. Você aprende a estrutura invisível da banca.</p>
+          </div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="step-num">04</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h4>Correções e acompanhamento</h4>
+            <p>Suas redações são corrigidas por especialistas. Você evolui de forma mensurável.</p>
+          </div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="step-num">05</div>
+          <div class="step-line step-line--last"></div>
+          <div class="step-body">
+            <h4>Prova com confiança 🏆</h4>
+            <p>Você entra sabendo exatamente o que fazer. E sai com a nota que precisa para a farda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SOBRE A MENTORIA ══════════════════════ -->
+  <section class="about">
+    <div class="container">
+      <div class="section-label reveal">POR QUE O P4G FUNCIONA</div>
+      <h2 class="section-title reveal">
+        Não é curso.<br/>
+        <span class="gold">É o padrão que a banca exige.</span>
+      </h2>
+      <p class="section-sub reveal">A CEBRASPE tem critérios invisíveis. O P4G te ensina exatamente o que eles procuram em cada redação.</p>
+      <div class="features-list-new">
+        <div class="feat-row reveal" data-delay="0">
+          <span class="feat-num">01</span>
+          <div class="feat-content">
+            <h4>Estrutura validada na CEBRASPE</h4>
+            <p>Cada parágrafo tem uma função específica que a banca espera encontrar. Você para de escrever no improviso e começa a escrever com propósito.</p>
+          </div>
+        </div>
+        <div class="feat-row reveal" data-delay="100">
+          <span class="feat-num">02</span>
+          <div class="feat-content">
+            <h4>Trilha 100% focada no concurso</h4>
+            <p>Sem dispersão. Cada etapa do método está organizada para o PM-Alagoas 2026. Você sabe o que estudar todo dia até a prova.</p>
+          </div>
+        </div>
+        <div class="feat-row reveal" data-delay="200">
+          <span class="feat-num">03</span>
+          <div class="feat-content">
+            <h4>Correções reais da sua redação</h4>
+            <p>Sua redação é corrigida por profissionais que identificam exatamente o que a banca pontua e o que ela desconta.</p>
+          </div>
+        </div>
+        <div class="feat-row reveal" data-delay="300">
+          <span class="feat-num">04</span>
+          <div class="feat-content">
+            <h4>Todas as etapas cobertas</h4>
+            <p>Introdução, desenvolvimento, conclusão e recursos. Tudo dentro do padrão CEBRASPE, sem lacunas.</p>
+          </div>
+        </div>
+        <div class="feat-row reveal" data-delay="400">
+          <span class="feat-num">05</span>
+          <div class="feat-content">
+            <h4>Suporte direto com o mentor</h4>
+            <p>Canal exclusivo de dúvidas respondido pessoalmente. Você nunca fica travado sozinho durante a preparação.</p>
+          </div>
+        </div>
+        <div class="feat-row reveal" data-delay="500">
+          <span class="feat-num">06</span>
+          <div class="feat-content">
+            <h4>Material completo e atualizado</h4>
+            <p>Videoaulas, PDFs, banco de redações corrigidas e estruturas prontas. Tudo em um único lugar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROVA SOCIAL ══════════════════════ -->
+  <section class="proof">
+    <div class="proof-bg"></div>
+    <div class="container proof-content">
+      <div class="proof-text reveal">
+        <div class="section-label section-label--gold">RESULTADOS REAIS</div>
+        <h2 class="proof-title">
+          O método que já<br/>
+          <span class="gold">aprovou na CEBRASPE</span>
+        </h2>
+        <p>
+          Estrutura simples e comprovada. Cada aluno recebe diagnóstico personalizado e acompanhamento real — não apenas um login numa plataforma.
+        </p>
+        <ul class="proof-list">
+          <li><span class="proof-bullet">▶</span> Mais de 15 alunos aprovados com o Método P4G</li>
+          <li><span class="proof-bullet">▶</span> Nota máxima 19,50 conquistada pelo próprio mentor</li>
+          <li><span class="proof-bullet">▶</span> Método validado na banca CEBRASPE</li>
+          <li><span class="proof-bullet">▶</span> Focado 100% no concurso PM-Alagoas 2026</li>
+        </ul>
+        <a href="#planos" class="hero-cta hero-cta--sm btn-magnetic">QUERO SER APROVADO ↓</a>
+      </div>
+      <div class="proof-numbers reveal">
+        <div class="big-stat">
+          <span class="big-num" data-target="15" data-prefix="+">+15</span>
+          <span class="big-label">APROVADOS</span>
+        </div>
+        <div class="big-stat-row">
+          <div class="small-stat">
+            <span class="small-num">19,50</span>
+            <span class="small-label">Nota CEBRASPE</span>
+          </div>
+          <div class="small-stat">
+            <span class="small-num">P4G</span>
+            <span class="small-label">Método validado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ O QUE VOCÊ RECEBE ══════════════════════ -->
+  <section class="receive">
+    <div class="container receive-grid">
+      <div class="receive-left reveal">
+        <div class="section-label">O QUE VOCÊ RECEBE</div>
+        <h2>Imagine entrar na prova<br/><span class="gold">sabendo exatamente o que fazer.</span></h2>
+        <p>
+          Alguém organizando sua preparação linha por linha, do parágrafo de introdução ao de conclusão. Você acorda sabendo <strong>EXATAMENTE O QUE ESCREVER</strong>.
+        </p>
+        <p>
+          Quem estuda para redação sem um método gasta mais tempo memorizando estruturas do que praticando. Meu aluno não sofre desse problema.
+        </p>
+        <p>
+          A Mentoria Fênix não é um curso comum. É diagnóstico real, correção real e acompanhamento real — tudo para você chegar na prova com 19,50 no horizonte.
+        </p>
+      </div>
+      <div class="receive-right reveal">
+        <div class="summary-card">
+          <div class="summary-header">
+            <div class="summary-badge">★</div>
+            <h3>RESUMINDO</h3>
+          </div>
+          <p class="summary-intro">
+            Você receberá <strong>TUDO</strong> o que precisa para dominar a redação da PMAL 2026, sem se preocupar em comprar mais nada.
+          </p>
+          <ul class="summary-list">
+            <li><span class="sl-icon">⬡</span> Metodologia P4G completa e validada</li>
+            <li><span class="sl-icon">⬡</span> Correções detalhadas até a prova</li>
+            <li><span class="sl-icon">⬡</span> 100% focado na banca CEBRASPE</li>
+            <li><span class="sl-icon">⬡</span> Suporte para todas as etapas</li>
+          </ul>
+          <div class="guarantee-block">
+            <div class="guarantee-icon">🛡️</div>
+            <div>
+              <strong>Garantia incondicional de 7 dias</strong>
+              <p>
+                Se sentir que não era o que esperava… basta mandar uma mensagem. Devolvemos 100% do valor. Sem burocracia. Sem enrolação. Sem risco. Porque quem precisa provar resultado somos nós.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ QUIZ ══════════════════════ -->
+  <section class="quiz-section">
+    <div class="container">
+      <div class="section-label reveal">DESCUBRA AGORA</div>
+      <h2 class="section-title reveal">
+        Sua redação está<br/>
+        <span class="gold">pronta para a CEBRASPE?</span>
+      </h2>
+      <p class="section-sub reveal">Responda 3 perguntas rápidas e descubra seu nível de preparo para a redação.</p>
+
+      <div class="quiz-wrap reveal">
+        <div class="quiz-inner" id="quizInner">
+
+          <!-- Q1 -->
+          <div class="quiz-step active" data-step="1">
+            <p class="quiz-q">Você conhece a estrutura de redação que a CEBRASPE espera?</p>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-next="2" data-score="0">Nunca ouvi falar</button>
+              <button class="quiz-opt" data-next="2" data-score="1">Ouvi falar mas não domino</button>
+              <button class="quiz-opt" data-next="2" data-score="2">Sim, já estudo isso</button>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-step" data-step="2">
+            <p class="quiz-q">Como você se sente ao começar a escrever uma redação?</p>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-next="3" data-score="0">Dá branco, não sei por onde começar</button>
+              <button class="quiz-opt" data-next="3" data-score="1">Começo mas fico perdido no meio</button>
+              <button class="quiz-opt" data-next="3" data-score="2">Tenho uma estrutura que sigo</button>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-step" data-step="3">
+            <p class="quiz-q">Você já teve sua redação corrigida por alguém especializado na banca CEBRASPE?</p>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-next="result" data-score="0">Nunca</button>
+              <button class="quiz-opt" data-next="result" data-score="1">Uma ou duas vezes</button>
+              <button class="quiz-opt" data-next="result" data-score="2">Sim, regularmente</button>
+            </div>
+          </div>
+
+          <!-- RESULTADO -->
+          <div class="quiz-step quiz-result" data-step="result">
+            <div class="quiz-result-icon" id="quizIcon">🎯</div>
+            <h3 class="quiz-result-title" id="quizTitle">Calculando...</h3>
+            <p class="quiz-result-desc" id="quizDesc"></p>
+            <a href="https://pay.plataformatutory.com.br/checkout/4da2a522-8ac2-4728-bbb4-1fd2057e6e1d" target="_blank" class="plan-btn plan-btn--dark quiz-result-btn">QUERO A MENTORIA →</a>
+            <button class="quiz-restart" id="quizRestart">Refazer o quiz</button>
+          </div>
+
+        </div>
+
+        <!-- Barra de progresso do quiz -->
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quizProgressFill"></div>
+        </div>
+        <p class="quiz-step-label" id="quizStepLabel">Pergunta 1 de 3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA FINAL ══════════════════════ -->
+  <section class="cta-final">
+    <div class="cta-lines"></div>
+    <div class="container cta-content">
+
+      <!-- Urgência: countdown -->
+      <div class="cta-urgency reveal">
+        <span class="cta-urgency-dot"></span>
+        <span>Prova em <strong>19 de Julho</strong> —</span>
+        <span class="cta-urgency-count" id="ctaCountdown">calculando...</span>
+        <span>para a prova</span>
+      </div>
+
+      <h2 class="cta-title reveal">
+        Sua farda te espera.<br/>
+        <span class="gold">E o tempo, não.</span>
+      </h2>
+
+      <p class="cta-sub reveal">A redação pode continuar sendo o motivo da sua reprovação.<br/>Ou pode ser a etapa que finalmente muda sua vida.</p>
+
+      <!-- Botão principal: Mentoria -->
+      <div class="cta-primary reveal">
+        <a href="https://pay.plataformatutory.com.br/checkout/4da2a522-8ac2-4728-bbb4-1fd2057e6e1d" target="_blank" class="cta-btn-main btn-magnetic">
+          QUERO A MENTORIA FÊNIX
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <p class="cta-primary-note">🔒 Pagamento seguro · Garantia de 7 dias</p>
+      </div>
+
+      <!-- Separador -->
+      <div class="cta-or reveal"><span>ou</span></div>
+
+      <!-- Botão secundário: Curso -->
+      <div class="reveal">
+        <a href="https://pay.plataformatutory.com.br/checkout/4a57e7de-a7cb-4f06-b6c6-a9ff2c942b93" target="_blank" class="cta-btn-secondary btn-magnetic">
+          Quero só o Curso Charlie Myke →
+        </a>
+      </div>
+
+      <p class="whatsapp-link reveal">
+        Dúvidas? Fale comigo no
+        <a href="https://wa.me/557999797987" target="_blank">WhatsApp ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 — Todos os direitos reservados.</p>
+      <p class="footer-legal">
+        Este site não é afiliado à Polícia Militar. As informações são de responsabilidade do produtor.
+      </p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/557999797987" target="_blank" class="whatsapp-float" aria-label="Fale no WhatsApp">
+    <span class="wa-icon">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0C7.164 0 0 7.163 0 16c0 2.824.738 5.476 2.027 7.781L0 32l8.469-2.004A15.934 15.934 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.849l-.486-.289-5.027 1.189 1.23-4.899-.317-.502A13.261 13.261 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.878c-.398-.199-2.355-1.162-2.72-1.294-.364-.133-.629-.199-.894.199-.265.398-1.028 1.294-1.26 1.561-.232.265-.465.298-.863.1-.398-.2-1.681-.619-3.202-1.977-1.183-1.056-1.982-2.361-2.214-2.759-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.697.2-.233.266-.399.399-.664.133-.266.066-.498-.033-.697-.1-.2-.894-2.155-1.226-2.951-.322-.773-.65-.668-.894-.68-.232-.011-.498-.014-.763-.014-.265 0-.696.1-1.061.498-.364.398-1.393 1.361-1.393 3.318 0 1.957 1.426 3.848 1.625 4.114.199.265 2.807 4.285 6.802 6.012.951.41 1.692.655 2.27.838.953.303 1.82.26 2.506.158.764-.114 2.355-.963 2.688-1.893.332-.93.332-1.727.232-1.893-.099-.166-.364-.265-.762-.464z"/>
+      </svg>
+    </span>
+    <span class="whatsapp-float-label">Tem dúvidas?</span>
+  </a>
+
+  <script src="animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Vídeos originais (muito grandes)
+videos/gabriel.mp4
+videos/gabriel_h264.mp4
+videos/diego.mp4
+videos/diego_h264.mp4
+videos/bia.mp4
+videos/bia_h264.mp4
+videos/vendas-pmal.mp4
+videos/vendas-pmal-h264.mp4
+
+# Sistema
+.DS_Store
+Thumbs.db
