@@ -330,7 +330,7 @@ function initScrollProgress() {
 function initTypewriter() {
   const el = document.getElementById('typewriter');
   if (!el) return;
-  const words = ['Aprovado.', 'Fardado.', 'Servidor Público Federal.', 'Nota Máxima.'];
+  const words = ['Aprovado.', 'Fardado.', 'Nota Máxima.', 'Policial Militar de Alagoas.'];
   let wi = 0, ci = 0, deleting = false;
   function tick() {
     const word = words[wi];

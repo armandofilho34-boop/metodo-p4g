@@ -1743,11 +1743,11 @@ body {
   background: linear-gradient(90deg, #5c0000, #dc2626, #b91c1c, #dc2626, #5c0000);
   background-size: 300% 100%;
   animation: urgencyMove 3s ease infinite;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 24px;
-  padding: 20px 36px;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
   font-size: 17px;
   color: #fff;
   position: relative;
@@ -1758,17 +1758,18 @@ body {
 @media (max-width: 768px) {
   .urgency-bar {
     display: flex !important;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 10px 16px;
+    padding: 5px 12px;
     text-align: center;
   }
-  .urgency-logos { display: flex !important; justify-content: center; }
-  .urgency-logos img { height: 36px; width: 36px; }
+  .urgency-bar p { font-size: 11px; }
+  .urgency-alert { font-size: 10px; letter-spacing: 2px; padding: 1px 8px; margin-bottom: 2px; }
   .urgency-center {
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    gap: 6px;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -1821,8 +1822,24 @@ body {
   justify-content: center;
 }
 
-.urgency-bar p { margin: 0; text-align: center; font-size: 19px; font-weight: 700; letter-spacing: 0.3px; }
+.urgency-bar p { margin: 0; text-align: center; font-size: 17px; font-weight: 600; letter-spacing: 0.3px; line-height: 1.5; }
 .urgency-bar strong { color: #ffd700; }
+.urgency-alert {
+  display: block;
+  color: #ffd700;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  background: rgba(255,215,0,0.15);
+  padding: 2px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,215,0,0.4);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .urgency-countdown {
   font-size: 14px;
@@ -3583,6 +3600,67 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+/* Benefits grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 0 auto 40px;
+  max-width: 800px;
+}
+
+@media (max-width: 600px) {
+  .benefits-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(201,162,39,0.05);
+  border: 1.5px solid rgba(201,162,39,0.25);
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.benefit-card:hover {
+  background: rgba(201,162,39,0.1);
+  border-color: rgba(201,162,39,0.5);
+}
+
+.benefit-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.benefit-card div strong {
+  display: block;
+  font-size: 17px;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.benefit-card div p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .benefit-card {
+    padding: 12px 14px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .benefit-icon { font-size: 22px; }
+  .benefit-card div strong { font-size: 14px; }
+  .benefit-card div p { font-size: 11px; }
+}
+
 /* Intro */
 .pain-intro {
   max-width: 700px;
@@ -3708,18 +3786,20 @@ body {
 
 /* Closer */
 .pain-closer {
-  max-width: 560px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 28px 36px;
 }
 
 .pain-closer p {
-  font-size: 15px;
-  color: var(--muted);
+  font-size: 20px;
+  color: var(--white);
   line-height: 1.75;
+  font-weight: 500;
 }
 
 .pain-closer-strong {
